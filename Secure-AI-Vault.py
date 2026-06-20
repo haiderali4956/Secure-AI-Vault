@@ -19,16 +19,16 @@ else:
 if password==pin:
     while True:
         print('-------------------------------------------------------------------------')
-        print('🏦 --- SECURE AI VAULT MAIN MENU ---')
-        print('1. Check Balance 💸🔥')
-        print('2. Deposit Money 💰')
-        print('3. Withdraw Money 💳')
-        print('4. Exit Vault 🚪')
+        print('--- SECURE AI VAULT MAIN MENU ---')
+        print('1. Check Balance ')
+        print('2. Deposit Money ')
+        print('3. Withdraw Money ')
+        print('4. Exit Vault ')
         print('-------------------------------------------------------------------------')
         
         choice = int(input('Apna operation select karein (1, 2, 3, ya 4): '))
         if choice == 1:
-             print('Aapka Current Balance hai: Rs. ',balance,'💸🔥')
+             print('Aapka Current Balance hai: Rs. ',balance,'')
         elif choice ==2:
             deposit = int(input('Kitne paise Deposit karne hain? Rs. '))
             if deposit>0:
@@ -38,7 +38,7 @@ if password==pin:
                 print('wrong ammount entered')
         elif choice ==3:
             withdraw =int(input('Kitne paise Withdraw karne hain? Rs. '))
-            if withdraw<balance:
+            if withdraw<=balance:
                 balance -=withdraw
                 print('✅ Transaction Successful! Remaining Balance hai: Rs. ',balance)
             else:
